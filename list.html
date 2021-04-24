@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>登陆页面</title>
+	<title>列表页面</title>
 	<style type="text/css" media="screen">
 		a{
 			text-decoration:none
@@ -12,9 +12,8 @@
 		}
 		#header{
 			display: inline-block;
-			
-			width: 60%;
-			padding: 0 20% 0 20%;
+			width: 100%;
+			padding: 0 12.5% 0 12.5%;
 		}
 		#telphone{
 			display: inline-block;
@@ -25,7 +24,7 @@
 		}
 		#logo{
 			display: inline-block;
-
+			float: left;
 			margin: 10px 0 10px 0;
 		}
 		.icon-zuoji{
@@ -226,6 +225,25 @@
 			display: inline-block;
 		}
 
+		.topheader{
+			background-color: #f2f2f2;
+		}
+		.topheadertext{
+			margin-left: 200px;
+			display: inline-block;
+			margin-top: 3px;
+			margin-bottom: 2px;
+ 
+			width: 70%;
+		}
+		.topheadertext > span{
+			color: blue;
+		}
+		.topheadertext  a {
+			color: red;
+		}
+
+		
 
 	</style>
 	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
@@ -237,18 +255,101 @@
 </head>
 <body>
 	<div id="login">
+			<div class="topheader">
+				<div class="topheadertext">
+					你好，欢迎来到唐山！<img src="images/renicon.png"><span> 登陆 | 注册     <span> 
+					<a href="">[切换城市]</a>
+					<div style="display: inline-block; float: right; ">
+						<a href="" title="" style="color: #000">199-1234-8015</a>
+						<i class="icon-zuoji"></i>
+					</div>
+				</div>
+				
+			</div>
 			<div id="header">
 				<div id="logo">
 					<img src="images/logo.png" alt="物流唐山">
 				</div>
-					
+				<div style="display: inline-block;text-align: center;width: 30%;float: left;margin-left: 60px;margin-top: 30px;">
+					<div style="display: flex;flex-direction: column;">
+						<div style="display: flex;flex-direction: row">
+							<div style="background-color: #fd5705">
+								找企业
+							</div>
+							<div style="margin-left: 20px">
+								找咨询
+							</div>
+						</div>
+						<div>
+							<input type="" name="" placeholder="请输入您要搜索的关键字" style="height: 30px; border: 2px solid #fd5705;width: 100%;
+								border-right: 60px solid #fd5705;
+								position: relative;
+							">
+
+							<div style="display:block; position: absolute;color: #fff;background-color: red;margin-top: -28px;margin-left: 30.5%;}">                                                        
+								<img src="images/sousuo.png">
+								搜索
+							</div>
+							<!-- 不行再用
+							<div style="position: absolute;background-color:#fd5705 ">
+								搜索
+								<i style="background: url(images/sousuo.png);"></i>
+							</div>
+							-->
+						</div>
+						
+					</div>
+				</div>
+
+				<div style="display: flex;flex-direction: column; float: right;margin-right: 30%; 
+				margin-top: 10px;">
+					<div style="flex: 1;width: 150px;height: 100px; text-align: center; border: 1px solid rgba(0,0,0,0.2); align-items: center;display: flex;justify-content:center;">
+						<img src="images/yinwubao.png" style="align-items: center;justify-content:center;">
+					</div>
+					<div style="flex: 1;width: 150px;height: 100px;text-align: center;  border: 1px solid rgba(0,0,0,0.2); align-items: center;display: flex;justify-content:center;">
+						<img src="images/wuliuguanwang.png" style="align-items: center;justify-content:center;">
+					</div>
+				</div>
 				
-				<div id="telphone">
-					<a href="" title="">199-1234-8015</a>
-					<i class="icon-zuoji"></i>
+			</div>
+			<div class="nav" style="background-color: #0060c6;text-align: center; padding-left: 10%;padding-right: 10%;color: #fff;font-size: 16px; padding-top: 10px;padding-bottom: 10px;">
+				<div style="display: flex;flex-direction: row;">
+					<div style="flex: 1;">
+						首页
+					</div>
+					<div style="flex: 1;">
+						物流协会
+					</div>
+					<div style="flex: 1;">
+						银物保·物流交易
+					</div>
+					<div style="flex: 1;display: flex;flex-direction: column;">
+						
+						<div style="">
+							物流园区
+						</div>
+						<div style="height: 10px; 
+							margin: 0 auto;
+							width: 50px;
+							border-bottom: 3px solid #fff;
+							" >
+							
+						</div>
+					</div>
+					<div style="flex: 1;">
+						仓储物流
+					</div>
+					<div style="flex: 1;">
+						物流专线
+					</div>
+					<div style="flex: 1;">
+						物流资讯
+					</div>
+					<div style="flex: 1;">
+						物流招聘
+					</div>
 				</div>
 			</div>
-
 
 			<div id="container">
 				<div id="container-left">
