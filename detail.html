@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>列表页面</title>
+	<title>详情页面</title>
 	<style type="text/css" media="screen">
 		a{
 			text-decoration:none
@@ -359,14 +359,14 @@
 					<div style="flex: 1;display: flex;flex-direction: row;">
 						<div style="flex: 2;display: flex;flex-direction: column;">
 							<div style="flex: 5">
-								<img src="images/detail1.png">
+								<img :src="img1">
 							</div>
 							<div style="flex: 1;display: flex;flex-direction: row;">
-								<img src="images/detail2.png">
-								<img src="images/detail3.png">
-								<img src="images/detail4.png">
-								<img src="images/detail5.png">
-								<img src="images/detail6.png">
+								<img src="images/detail2.png" @click="changeImg">
+								<img src="images/detail3.png" @click="changeImg">
+								<img src="images/detail4.png" @click="changeImg">
+								<img src="images/detail5.png" @click="changeImg">
+								<img src="images/detail6.png" @click="changeImg">
 							</div>
 						</div>
 						<div style="flex: 5;display: flex;flex-direction: column;margin-left: 20px;">
@@ -601,7 +601,8 @@
 				phonenumber:'11111',
 				password:'asdasdasd',
 				resdata:'',
-				logintype:''
+				logintype:'',
+				img1:'images/detail1.png'
 			},
 			methods:{
 					get:function(){
@@ -620,7 +621,14 @@
 		           		window.location.href='./list.html'
 		           		console.log("跳转完成")
 		           	}
-            	}
+		           	
+
+            	},
+            	changeImg:function(e){
+		           		console.log(e.target.src);
+		           		app.$data.img1 = e.target.src;
+
+		           	}
 
 			}
 		})
