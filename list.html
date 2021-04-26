@@ -254,7 +254,7 @@
 	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
 <body>
-	<div id="login">
+	<div id="login"style="overflow: hidden;" >
 			<div class="topheader">
 				<div class="topheadertext">
 					你好，欢迎来到唐山！<img src="images/renicon.png"><span> 登陆 | 注册     <span> 
@@ -484,7 +484,7 @@
 							</div>
 						</div>
 						<div style="flex: 4;background-color: #fff;display: flex;flex-direction: column;">
-							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;">
+							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;" @click=todetail()>
 								<div style="display: flex;align-items: center;height: 100%;">
 									<img src="images/zhongxiaimg.png" width="150px;"height="100px;">
 									<div style="margin-left: 20px;display: flex;flex-direction: column;">
@@ -501,7 +501,7 @@
 								</div>
 
 							</div>
-							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;">
+							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;" @click=todetail()>
 								<div style="display: flex;align-items: center;height: 100%;">
 									<img src="images/zhongxiaimg.png" width="150px;"height="100px;">
 									<div style="margin-left: 20px;display: flex;flex-direction: column;">
@@ -517,7 +517,7 @@
 									</div>
 								</div>
 							</div>
-							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;">
+							<div style="flex: 2;margin-left: 20px;margin-right: 20px;border-bottom: 2px solid #f2f2f2;" @click=todetail()>
 								<div style="display: flex;align-items: center;height: 100%;">
 									<img src="images/zhongxiaimg.png" width="150px;"height="100px;">
 									<div style="margin-left: 20px;display: flex;flex-direction: column;">
@@ -716,7 +716,12 @@
 		           		window.location.href='./list.html'
 		           		console.log("跳转完成")
 		           	}
-            	}
+		           	
+            	},
+            	todetail:function(){
+		           		window.location.href='./detail.html'
+		           		console.log("details跳转")
+		        }
 
 			}
 		})
